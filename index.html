@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estudando Formulários</title>
+</head>
+<body>
+  <form action="#" autocomplete="on" method="post" name="signup" onsubmit="alert('Formulário enviado!');" target="_blank"> <!-- method pode ser get ou post, mas o get envia os dados pela url o que o torna inseguro. Autocomplete é pra preenchimento automatico dos campos -->
+    <p>Nome: <input type="text" name="name"></p>
+    <p>Idade: <input type="number" name="age"></p>
+    <p>Senha: <input type="password" name="password"></p>
+    <button type="submit">Enviar</button>
+  </form>
+</body>
+</html>

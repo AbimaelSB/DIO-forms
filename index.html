@@ -3,14 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
   <title>Estudando Formulários</title>
 </head>
 <body>
+  <header>
+    <h1>Formulário de Cadastro</h1>
+  </header>
   <form action="#" autocomplete="on" method="post" name="signup" onsubmit="alert('Formulário enviado!');" target="_blank"> <!-- method pode ser get ou post, mas o get envia os dados pela url o que o torna inseguro. Autocomplete é pra preenchimento automatico dos campos -->
-    <p>Nome: <input type="text" name="name"></p>
-    <p>Idade: <input type="number" name="age"></p>
-    <p>Senha: <input type="password" name="password"></p>
+    Nome: <input type="text" name="name"><br>
+    Idade: <input type="number" name="age"><br>
+    Senha: <input type="password" name="password"><br>
     <button type="submit">Enviar</button>
+  </form>-->
+  <hr>
+  <h2>Pratica com diferentes tipos de inputs</h2>
+  <form>
+    <label>Text: </label><input type="text" placeholder="Seu texto aqui!" minlength="4" maxlength="10"><br>
+    <label>Number: </label><input type="number" value="0" min="0" max="150" step="10"><br>
+    <label>Range: </label><input type="range" min="0" max="100"><br>
+    <label>Color: </label><input type="color"><br>
+    <label>E-mail: </label><input type="email" required><br> <!-- required torna o preenchimento obrigatorio -->
+    <label>URL: </label><input type="url" value="http://" required><br>
+    <label>Date: </label><input type="date"><br>
+    <label>Time: </label><input type="time"><br>
+    <label>Date and Time: </label><input type="datetime-local"><br>
+    <label>Week: </label><input type="week"><br>
+    <label>Month: </label><input type="month"><br>
+    <label>Checkbox: </label><input type="checkbox"><br>
+    <label>Radio: </label><input type="radio" name="accept" checked><input type="radio" name="accept"><br> <!-- seleciona/marca um item assim que a página é carregada -->
+    <label>Hidden: </label><input type="hidden"><br>
+    <label>File: </label><input type="file" multiple><br> <!-- multiple permite selecionar vários arquivos -->
+    <label>Search: </label><input type="search"><br>
+    <label>Button: </label><input type="submit" value="Send"><br> <!-- tag <button> </button> é melhor -->
   </form>
 </body>
 </html>

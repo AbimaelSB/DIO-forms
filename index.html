@@ -8,17 +8,17 @@
 </head>
 <body>
   <header>
-    <h1>Formulário de Cadastro</h1>
+    <h2>Formulário de Cadastro</h2>
   </header>
   <form action="#" autocomplete="on" method="post" name="signup" onsubmit="alert('Formulário enviado!');" target="_blank"> <!-- method pode ser get ou post, mas o get envia os dados pela url o que o torna inseguro. Autocomplete é pra preenchimento automatico dos campos -->
     Nome: <input type="text" name="name"><br>
     Idade: <input type="number" name="age"><br>
     Senha: <input type="password" name="password"><br>
     <button type="submit">Enviar</button>
-  </form>-->
+  </form>
   <hr>
   <h2>Pratica com diferentes tipos de inputs</h2>
-  <form>
+  <form> <!-- onsubmit faz a validação do formulário -->
     <label>Text: </label><input type="text" placeholder="Seu texto aqui!" minlength="4" maxlength="10"><br>
     <label>Number: </label><input type="number" value="0" min="0" max="150" step="10"><br>
     <label>Range: </label><input type="range" min="0" max="100"><br>
@@ -30,12 +30,31 @@
     <label>Date and Time: </label><input type="datetime-local"><br>
     <label>Week: </label><input type="week"><br>
     <label>Month: </label><input type="month"><br>
-    <label>Checkbox: </label><input type="checkbox"><br>
+    <label>Checkbox: </label><input type="checkbox" disabled><br> <!-- torna a checkbox inacessível (somente leitura); em checkbox é recomendado usar o name como um vetor e o method post -->
     <label>Radio: </label><input type="radio" name="accept" checked><input type="radio" name="accept"><br> <!-- seleciona/marca um item assim que a página é carregada -->
     <label>Hidden: </label><input type="hidden"><br>
     <label>File: </label><input type="file" multiple><br> <!-- multiple permite selecionar vários arquivos -->
     <label>Search: </label><input type="search"><br>
     <label>Button: </label><input type="submit" value="Send"><br> <!-- tag <button> </button> é melhor -->
+    <button type="button">botão</button>
+    <button type="reset">reset</button>
+    <button type="menu">menu</button> <!-- Necessita de alguns complementos -->
+    <button type="submit">submit</button>
+  </form>
+  <hr>
+  <h2>Select e seus tipos</h2>
+  <form method="get">
+    <label>Nome: </label><input type="text" name="name"><br>
+    <label>Cargo: </label><select name="role">
+      <option value="" selected disabled hidden>Selecione um cargo</option> <!-- option com "selected disabled hidden" funciona como um placeholder para tags select -->
+      <option value="Analista">Analista de Redes</option>
+      <option value="Administrador">Administrador de Redes</option>
+      <option value="Frontend">Desenvolvedor Frontend</option>
+      <option value="Backend">Desenvolvedor Backend</option>
+      <option value="Fullstack">Desenvolvedor Fullstack</option>
+    </select><br>
+    Assunto: <input type="text" name="subject"><br>
+    <button type="submit">Enviar</button>
   </form>
 </body>
 </html>

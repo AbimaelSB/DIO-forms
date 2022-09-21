@@ -3,3 +3,12 @@
   font-family: 'Times New Roman', Times, serif;
   margin: 5px;
 }
+
+.comentario{
+  display: flex;
+  align-items: flex-start;
+}
+
+.comentario label{
+  display: block;
+}

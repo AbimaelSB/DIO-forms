@@ -42,10 +42,10 @@
     <button type="submit">submit</button>
   </form>
   <hr>
-  <h2>Select e seus tipos</h2>
+  <h2>Select e seus tipos + Textarea</h2>
   <form method="get">
     <label>Nome: </label><input type="text" name="name"><br>
-    <label>Cargo: </label><select name="role">
+    <label>Cargo: </label><select name="role" required>
       <option value="" selected disabled hidden>Selecione um cargo</option> <!-- option com "selected disabled hidden" funciona como um placeholder para tags select -->
       <option value="Analista">Analista de Redes</option>
       <option value="Administrador">Administrador de Redes</option>
@@ -53,7 +53,11 @@
       <option value="Backend">Desenvolvedor Backend</option>
       <option value="Fullstack">Desenvolvedor Fullstack</option>
     </select><br>
-    Assunto: <input type="text" name="subject"><br>
+    <label>Assunto: </label><input type="text" name="subject"><br>
+    <div class="comentario">
+      <label>Comentário:</label>
+      <textarea name="comment" cols="30" rows="10"></textarea>
+    </div>
     <button type="submit">Enviar</button>
   </form>
 </body>
